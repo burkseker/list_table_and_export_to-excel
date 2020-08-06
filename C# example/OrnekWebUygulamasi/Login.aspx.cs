@@ -20,7 +20,7 @@ namespace OrnekWebUygulamasi
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            Session["Send"] = TextBox1.Text.ToString();
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
@@ -71,9 +71,7 @@ namespace OrnekWebUygulamasi
                                                     where username = '" + username + "'", connection);
 
                 da.Fill(dt);
-
-                System.Windows.Forms.MessageBox.Show(dt.Rows[0].ItemArray[0].ToString(), "Prompt", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
-                
+         
                 connection.Close();
 
                 return dt.Rows[0].ItemArray[0].ToString();
@@ -90,9 +88,7 @@ namespace OrnekWebUygulamasi
                                                     where username = '" + username + "'", connection);
 
                 Int32 counted = (Int32)comm.ExecuteScalar();
-
-                System.Windows.Forms.MessageBox.Show(counted.ToString(), "Prompt", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
-
+        
                 connection.Close();
 
                 return counted;

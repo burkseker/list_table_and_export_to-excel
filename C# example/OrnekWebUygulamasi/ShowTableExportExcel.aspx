@@ -19,6 +19,7 @@
 <body>
     <form id="form1" runat="server" style="text-align: center">
             <br />
+            Username:
             <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
             <br />
             <asp:Button ID="btnConnectDB" runat="server" Text="address with names" OnClick="btnConnectDB_Click" Height="56px" />

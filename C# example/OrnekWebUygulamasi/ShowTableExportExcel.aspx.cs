@@ -24,7 +24,8 @@ namespace OrnekWebUygulamasi
         private string connectionString = "Server=ATEZ006;Database=selam;Trusted_Connection=True;";
 
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {   
+
             int check = Check_is_login();
             if (check == 0)
             {
@@ -33,6 +34,7 @@ namespace OrnekWebUygulamasi
         }
         protected void btnConnectDB_Click(object sender, EventArgs e)
         {
+            
             
             Create_dt();
             Liste.DataSource = dt;
@@ -117,8 +119,10 @@ namespace OrnekWebUygulamasi
             {
                 connection.Open();
 
+                string user__name = Session["Send"].ToString();
+
                 SqlDataAdapter da = new SqlDataAdapter(@"Update users Set IsAuth = 0
-                                                    where IsAuth = 1  ", connection);
+                                                    where IsAuth = 1 and Username = '" + user__name + "'", connection);
 
                 da.Fill(dt);
 
@@ -132,14 +136,14 @@ namespace OrnekWebUygulamasi
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                connection.Open();
+
+                string user__name = Session["Send"].ToString();
+                Label1.Text = user__name;
 
                 SqlDataAdapter da = new SqlDataAdapter(@"Select * from users
-                                                    where IsAuth = 1  ", connection);
+                                                    where IsAuth = 1 and Username = '" + user__name + "'" , connection);
 
                 da.Fill(xx);
-
-                connection.Close();
 
                 return xx.Rows.Count;
             }
