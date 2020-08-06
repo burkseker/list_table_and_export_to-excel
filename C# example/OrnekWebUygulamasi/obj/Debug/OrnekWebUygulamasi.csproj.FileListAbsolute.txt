@@ -105,3 +105,4 @@ C:\Users\burak.seker\source\repos\OrnekWebUygulamasi\OrnekWebUygulamasi\bin\Newt
 C:\Users\burak.seker\source\repos\OrnekWebUygulamasi\OrnekWebUygulamasi\obj\Debug\OrnekWebUygulamasi.csproj.ResolveComReference.cache
 C:\Users\burak.seker\source\repos\OrnekWebUygulamasi\OrnekWebUygulamasi\bin\EPPlus.dll
 C:\Users\burak.seker\source\repos\OrnekWebUygulamasi\OrnekWebUygulamasi\bin\EPPlus.xml
+C:\Users\burak.seker\source\repos\OrnekWebUygulamasi\OrnekWebUygulamasi\bin\System.Numerics.Vectors.dll
