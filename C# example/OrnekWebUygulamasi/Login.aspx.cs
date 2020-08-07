@@ -10,7 +10,6 @@ using DataTable = System.Data.DataTable;
 
 namespace OrnekWebUygulamasi
 {
-    
     public partial class WebForm2 : System.Web.UI.Page
     {   
         private DataTable dt = new DataTable();
@@ -65,14 +64,11 @@ namespace OrnekWebUygulamasi
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                connection.Open();
 
                 SqlDataAdapter da = new SqlDataAdapter(@"select password from users 
                                                     where username = '" + username + "'", connection);
 
                 da.Fill(dt);
-         
-                connection.Close();
 
                 return dt.Rows[0].ItemArray[0].ToString();
             }
@@ -99,14 +95,14 @@ namespace OrnekWebUygulamasi
             
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                connection.Open();
+                
 
                 SqlDataAdapter da = new SqlDataAdapter(@"Update users Set IsAuth = 1
                                                     where username = '" + username + "'", connection);
 
                 da.Fill(dt);
 
-                connection.Close();
+                
 
             }
         }

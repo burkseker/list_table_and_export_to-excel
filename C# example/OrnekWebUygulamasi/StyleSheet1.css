@@ -1,0 +1,89 @@
+﻿h1 {
+    text-align:center;
+    font-family: 'Squada One', cursive;
+}
+
+body {
+    text-align: center;
+    font-family: 'Squada One', cursive;
+    font-size: 30px;
+    background-color: coral;
+}
+.myButton {
+    box-shadow: inset 0px 1px 0px 0px #d9fbbe;
+    background: linear-gradient(to bottom, #b8e356 5%, #a5cc52 100%);
+    background-color: #b8e356;
+    border-radius: 4px;
+    border: 1px solid #83c41a;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #86ae47;
+}
+
+    .myButton:hover {
+        background: linear-gradient(to bottom, #a5cc52 5%, #b8e356 100%);
+        background-color: #a5cc52;
+    }
+
+    .myButton:active {
+        position: relative;
+        top: 1px;
+    }
+
+
+.tb_css {
+    color: Black;
+    width: 200px;
+    height: 14px;
+}
+
+input[type=text] {
+    font-family: 'Squada One', cursive;
+    border: 2px solid DeepSkyBlue;
+    border-radius: 4px;
+    font-size:20px;
+}
+
+.GridMain {
+    border-right: gainsboro thin solid;
+    border-top: gainsboro thin solid;
+    border-left: gainsboro thin solid;
+    border-bottom: gainsboro thin solid;
+    background-color: #333333;
+    width: 400px;
+    font-weight: bold;
+}
+
+.GridRow {
+    background-color: #0997EF;
+    color: White;
+    font-family: Calibri, Arial, Sans-Serif;
+}
+
+.GridSelectedRow {
+    font-family: Calibri, Arial, Sans-Serif;
+    background-color: #E6E6FA;
+}
+
+.GridHeader {
+    background-color: #ADD8E6;
+    font-weight: bold;
+    text-align: left;
+    color: #606166;
+    font-family: Calibri, Arial, Sans-Serif;
+}
+
+.corners {
+    border: 1px solid green;
+    border-color : greenyellow;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    -webkit-border-radius: 8px;
+}

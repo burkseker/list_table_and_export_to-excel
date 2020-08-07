@@ -7,26 +7,26 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <style type="text/css">
+     <style type="text/css">
         .yeniStil1 {
             font-family: "Courier New";
         }
     </style>
 </head>
 <body>
+   <h1>Click Button to Show Your Table</h1>
+   <h1>Click Export to Get Table in Excel File</h1>
     <form id="form1" runat="server" style="text-align: center">
-            <br />
             Username:
             <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
             <br />
-            <asp:Button ID="btnConnectDB" runat="server" Text="address with names" OnClick="btnConnectDB_Click" Height="56px" />
-            <asp:GridView ID="Liste" OnPageIndexChanging="gvProducts_PageIndexChanging"
-            AllowPaging="true" PageSize="10" runat="server" Height="226px" Width="1054px">
-            <PagerSettings Mode="NumericFirstLast" FirstPageText="İlk" LastPageText="Son" />
-            </asp:GridView>
+            <asp:Button type="button" class="myButton" ID="btnConnectDB" runat="server" Text="Show Table" OnClick="btnConnectDB_Click" Height="56px" />
+            
+            <br />
 
             <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">ExportToExcel</asp:LinkButton>
 
@@ -35,6 +35,11 @@
             <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Register </asp:LinkButton>
             <br />
             <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">Logout</asp:LinkButton>
+            <br />
+            <asp:GridView ID="Liste" OnPageIndexChanging="gvProducts_PageIndexChanging"
+            AllowPaging="true" PageSize="10" runat="server" Height="226px" Width="1054px" HorizontalAlign="Center" CssClass="corners">
+            <PagerSettings Mode="NumericFirstLast" FirstPageText="İlk" LastPageText="Son" />
+            </asp:GridView>
     </form>
 </body>
 </html>

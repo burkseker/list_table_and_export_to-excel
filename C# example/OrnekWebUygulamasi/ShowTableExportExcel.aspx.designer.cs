@@ -42,15 +42,6 @@ namespace OrnekWebUygulamasi
         protected global::System.Web.UI.WebControls.Button btnConnectDB;
 
         /// <summary>
-        /// Liste denetimi.
-        /// </summary>
-        /// <remarks>
-        /// Otomatik üretilmiş alan.
-        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView Liste;
-
-        /// <summary>
         /// LinkButton2 denetimi.
         /// </summary>
         /// <remarks>
@@ -76,5 +67,14 @@ namespace OrnekWebUygulamasi
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LinkButton3;
+
+        /// <summary>
+        /// Liste denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik üretilmiş alan.
+        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView Liste;
     }
 }
