@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using DataTable = System.Data.DataTable;
+using Microsoft.AspNet.FriendlyUrls;
 
 namespace OrnekWebUygulamasi
 {
@@ -19,12 +20,16 @@ namespace OrnekWebUygulamasi
         
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
+            string path = Request.GetFriendlyUrlFileVirtualPath();
             Session["Send"] = TextBox1.Text.ToString();
+
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Register.aspx");
+            Response.Redirect("Register");
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -55,7 +60,7 @@ namespace OrnekWebUygulamasi
                 else
                 {
                     Set_auth(TextBox1.Text.ToString());
-                    Response.Redirect("ShowTableExportExcel.aspx");
+                    Response.Redirect("Home");
                 }
             }
         }
@@ -107,6 +112,8 @@ namespace OrnekWebUygulamasi
             }
         }
 
-        
+
+
+
     }
 }

@@ -3,7 +3,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
@@ -13,8 +13,8 @@ button,input{overflow:visible}button,input,optgroup,select,textarea{margin:0;fon
  <link href="StyleSheet1.css" rel="stylesheet" />
  <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
 <body>
-    <form id="form1" runat="server" style="height: 300px">
-        <div style="text-align: center;">
+    <form id="form1" runat="server" style="height: 523px">
+        <div>
             Welcome!<br />
             <br />
             E-mail:<br />

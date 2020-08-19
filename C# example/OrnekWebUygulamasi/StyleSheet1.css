@@ -6,8 +6,9 @@
 body {
     text-align: center;
     font-family: 'Squada One', cursive;
-    font-size: 30px;
+    font-size: 50px;
     background-color: coral;
+    text-align: center;
 }
 .myButton {
     box-shadow: inset 0px 1px 0px 0px #d9fbbe;

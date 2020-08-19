@@ -11,6 +11,7 @@ using System.Diagnostics.PerformanceData;
 using System.Security.Cryptography;
 using System.Text;
 
+
 namespace OrnekWebUygulamasi
 {
     public partial class WebForm1 : System.Web.UI.Page
@@ -101,11 +102,6 @@ namespace OrnekWebUygulamasi
                 }
             }
         
-
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ShowTableExportExcel.aspx");
-        }
 
         private Int32 Check_unique(string email,string username)
         {
