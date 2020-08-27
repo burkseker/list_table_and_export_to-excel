@@ -111,9 +111,5 @@ namespace OrnekWebUygulamasi
 
             }
         }
-
-
-
-
     }
 }

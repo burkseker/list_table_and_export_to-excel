@@ -24,15 +24,6 @@ namespace OrnekWebUygulamasi
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// ScriptManager1 denetimi.
-        /// </summary>
-        /// <remarks>
-        /// Otomatik üretilmiş alan.
-        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
-        /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
-
-        /// <summary>
         /// DetailsView1 denetimi.
         /// </summary>
         /// <remarks>
@@ -42,15 +33,6 @@ namespace OrnekWebUygulamasi
         protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
 
         /// <summary>
-        /// DetailsView2 denetimi.
-        /// </summary>
-        /// <remarks>
-        /// Otomatik üretilmiş alan.
-        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DetailsView DetailsView2;
-
-        /// <summary>
         /// Panel1 denetimi.
         /// </summary>
         /// <remarks>
@@ -58,5 +40,14 @@ namespace OrnekWebUygulamasi
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel1;
+
+        /// <summary>
+        /// Button1 denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik üretilmiş alan.
+        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

@@ -32,8 +32,6 @@ button,input{overflow:visible}button,input,optgroup,select,textarea{margin:0;fon
             <br />
             <asp:Button ID="Button1" runat="server" Text="Register" OnClick="Button1_Click" class="myButton"/>
             <br />
-            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Table</asp:LinkButton>
-            <br />
             <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click1">Login</asp:LinkButton>
         </div>
         

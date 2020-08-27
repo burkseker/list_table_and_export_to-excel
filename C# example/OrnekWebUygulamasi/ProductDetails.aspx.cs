@@ -11,6 +11,11 @@ using DocumentFormat.OpenXml.Bibliography;
 using System.Windows.Forms;
 using System.Runtime.Remoting.Contexts;
 using System.Web.Services;
+using System.Web.Script.Services;
+using Newtonsoft.Json;
+using Microsoft.Office.Core;
+using Microsoft.Vbe.Interop;
+using ScrollBars = System.Web.UI.WebControls.ScrollBars;
 
 namespace OrnekWebUygulamasi
 {
@@ -20,7 +25,7 @@ namespace OrnekWebUygulamasi
 
         private DataTable dt = new DataTable();
         private DataTable xx = new DataTable();
-        
+        private GridView gridView = new GridView();
         protected void Page_Load(object sender, EventArgs e)
         {
             int check = 0;
@@ -31,15 +36,13 @@ namespace OrnekWebUygulamasi
                 check++;
             }
 
-
-            
-
-
         }
 
         private void Create_dt()
         {   
             string url = HttpContext.Current.Request.Path.ToString();
+            if(url != "/ProductDetails.aspx")
+            {
             string[] elements  = url.Split('/');
             HttpContext.Current.Server.UrlDecode(url);
 
@@ -57,40 +60,37 @@ namespace OrnekWebUygulamasi
             
             DetailsView1.DataSource = dt;
             DetailsView1.DataBind();
-           
+            }
 
         }
 
-        [WebMethod]
-        [System.Web.Script.Services.ScriptMethod(ResponseFormat = System.Web.Script.Services.ResponseFormat.Json)]
-        public void Newtable(int x)
+        public void Newtable()
         {
             string connectionString = "Server=ATEZ006;Database=selam;Trusted_Connection=True;";
-            DataTable yy = new DataTable();
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
 
                 using (SqlCommand cmd = new SqlCommand())
                 {
-                    GridView grd = new GridView();
-                    grd.ID = "GridView" + x.ToString();
                     SqlDataAdapter da = new SqlDataAdapter(@"SELECT  TOP 1 * FROM [selam].[Production].[Product]
                                                                 Order by NEWID()", connectionString);
-                    da.Fill(yy);
+                    da.Fill(xx);
 
-                    grd.DataSource = yy; // some data source
-                    grd.DataBind();
-
-                    Panel1.Controls.Add(grd);
-
-                    
                 }
+               
 
-                MessageBox.Show("girdi");
-                MessageBox.Show(yy.Rows[0].ItemArray[0].ToString());
             }
+            gridView.DataSource = xx;
+            gridView.DataBind();
+
+            Panel1.Controls.Add(gridView);
+
         }
 
-       
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Newtable(); 
+        }
     }
 }
